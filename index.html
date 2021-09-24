@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>画板</title>
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+    <div id="canvas"></div>
+    <script>
+        canvas.onclick = (e) => {
+            console.log(e.clientX)
+            console.log(e.clientY)
+            let div = document.createElement('div')
+            div.style.position = 'absolute'
+            div.style.left = e.clientX + 'px'
+            div.style.top = e.clientY + 'px'
+            div.style.width = '6px'
+            div.style.height = '6px'
+            div.style.marginLeft = '-3px'
+            div.style.marginTop = '-3px'
+            div.style.borderRadius = '50%'
+            div.style.backgroundColor = 'black'
+            canvas.appendChild(div)
+        }
+    </script>
+</body>
+
+</html>
